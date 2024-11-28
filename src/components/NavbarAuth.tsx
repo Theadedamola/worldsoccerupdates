@@ -24,7 +24,7 @@ export default function Navbar() {
                 isTop ? 'text-white' : 'text-green-600'
               }`}
             >
-              <img src={logo} alt="" className="w-32 h-32" />
+              <img src={logo} alt="" className="w-10 h-10" />
             </Link>
           </div>
 

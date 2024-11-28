@@ -1,6 +1,6 @@
 import { Facebook, Instagram } from 'iconsax-react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/Layer 5.png'
+import logo from '../assets/Layer 5 1.png'
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center">
             <Link to="/">
-              <img src={logo} alt="" className="w-32 h-32" />
+              <img src={logo} alt="" className="w-16 h-16" />
             </Link>
           </div>
 

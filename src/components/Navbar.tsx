@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="" className="w-32 h-32" />
+            <img src={logo} alt="" className="w-10 h-10" />
           </Link>
 
           {/* Desktop Navigation */}
