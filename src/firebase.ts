@@ -2,14 +2,14 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAoTnTC-bkM06QAoQO5Fx3G7KREVV2oJu4',
-  authDomain: 'voting-app-f9fde.firebaseapp.com',
-  projectId: 'voting-app-f9fde',
-  storageBucket: 'voting-app-f9fde.firebasestorage.app',
-  messagingSenderId: '1001743771594',
-  appId: '1:1001743771594:web:8a5d1d8c9642bd10a49133',
-  measurementId: 'G-JHK73635ER',
-};
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+}
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

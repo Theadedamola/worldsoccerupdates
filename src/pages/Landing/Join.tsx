@@ -8,7 +8,7 @@ const Join: React.FC = () => {
     <div className="h-fit flex items-center justify-center">
       <motion.div
         {...motionSettings}
-        className="flex flex-col mx-auto space-y-10 px-6 md:px-10 lg:px-16 py-40 "
+        className="flex flex-col mx-auto space-y-10 px-6 md:px-10 lg:px-16 py-24"
       >
         <div className="flex flex-col gap-4 items-center">
           <h1 className="text-3xl md:text-5xl font-medium">

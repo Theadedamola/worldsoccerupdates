@@ -24,7 +24,7 @@ export default function Navbar() {
   const navLinks = [
     { to: '/', label: 'Home', icon: Home },
     { to: '/about', label: 'About Us', icon: Info },
-    { to: '/shop', label: 'Shop', icon: ShoppingCart },
+    { to: '/store', label: 'Store', icon: ShoppingCart },
     { to: '/blog', label: 'Blog', icon: FileText },
   ]
 

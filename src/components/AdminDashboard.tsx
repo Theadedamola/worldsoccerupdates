@@ -20,7 +20,6 @@ interface VoteStats {
   nominees: {
     name: string
     votes: number
-    percentage: number
   }[]
 }
 
@@ -59,6 +58,7 @@ export default function AdminDashboard() {
         ])
 
       const votes = votesSnapshot.docs.map((doc) => doc.data())
+
       const nominees = nomineesSnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
@@ -72,12 +72,12 @@ export default function AdminDashboard() {
 
       categories.forEach((category) => {
         const categoryVotes = votes.filter(
-          (vote) => vote.category.slug === category.slug
+          (vote) => vote.category === category.slug
         )
+
         const categoryNominees = nominees.filter(
           (nominee) => nominee.category === category.slug
         )
-        const totalVotes = categoryVotes.length
 
         const nomineeStats = categoryNominees.map((nominee) => {
           const nomineeVotes = categoryVotes.filter(
@@ -86,7 +86,6 @@ export default function AdminDashboard() {
           return {
             name: nominee.name,
             votes: nomineeVotes,
-            percentage: totalVotes ? (nomineeVotes / totalVotes) * 100 : 0,
           }
         })
 
@@ -179,7 +178,7 @@ export default function AdminDashboard() {
                   <YAxis />
                   <Tooltip />
                   <Legend />
-                  <Bar dataKey="percentage" name="Vote %" fill="#15803d" />
+                  <Bar dataKey="votes" name="Vote Count" fill="#15803d" />
                 </BarChart>
               </ResponsiveContainer>
             </div>

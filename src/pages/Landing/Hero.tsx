@@ -8,10 +8,13 @@ import { motionSettings } from '../../hooks/FramerSettings'
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen bg-hero-bg bg-cover flex items-center justify-center">
-      <div className="absolute w-full h-screen bg-black/40"></div>
+    <div className="relative h-fit bg-hero-bg bg-cover flex items-center justify-center">
+      <div className="absolute top-0 w-full h-full bg-black/40"></div>
       {/* Content */}
-      <motion.div {...motionSettings} className="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-10 lg:px-16">
+      <motion.div
+        {...motionSettings}
+        className="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-10 lg:px-16 py-40"
+      >
         <div className="flex items-center justify-center -space-x-4 mb-4">
           <img
             src={tofunmi}
