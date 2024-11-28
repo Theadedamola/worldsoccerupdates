@@ -1,10 +1,12 @@
 
+import { motion } from 'framer-motion'
+import { motionSettings } from '../../hooks/FramerSettings'
 import ImageMarquee from './Marquee'
 
 const Benefits = () => {
   return (
     <div className="h-screen mx-h-[900px] flex items-center justify-center">
-      <div className="flex flex-col mx-auto space-y-10 px-6 md:px-10 lg:px-16 py-16">
+      <motion.div {...motionSettings} className="flex flex-col mx-auto space-y-10 px-6 md:px-10 lg:px-16 py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="flex flex-col gap-4 items-start">
             <h1 className="text-start text-4xl md:text-5xl font-medium">
@@ -17,7 +19,7 @@ const Benefits = () => {
           </div>
           <ImageMarquee />
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

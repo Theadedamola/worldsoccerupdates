@@ -3,13 +3,15 @@ import ollams from '../../assets/ollams.jpg'
 import tofunmi from '../../assets/tofunmi.jpg'
 import josh from '../../assets/Screenshot 2024-11-25 at 23.13.47.png'
 import pelumi from '../../assets/oluwapelumi.jpg'
+import { motion } from 'framer-motion'
+import { motionSettings } from '../../hooks/FramerSettings'
 
 export default function Hero() {
   return (
     <div className="relative min-h-screen bg-hero-bg bg-cover flex items-center justify-center">
       <div className="absolute w-full h-screen bg-black/40"></div>
       {/* Content */}
-      <div className="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-10 lg:px-16">
+      <motion.div {...motionSettings} className="relative z-30 max-w-5xl mx-auto text-center px-6 md:px-10 lg:px-16">
         <div className="flex items-center justify-center -space-x-4 mb-4">
           <img
             src={tofunmi}
@@ -66,7 +68,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
